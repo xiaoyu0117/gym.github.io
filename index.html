@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-hans" dir="ltr">
+	<head profile="http://www.w3.org/1999/xhtml/vocab">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="https://cgyy.xmu.edu.cn/sites/default/files/logo_0.png" type="image/png" />
+		<title>健身房预约 | 翔安校区体育馆预约系统</title>
+		<style>
+			@import url("https://cgyy.xmu.edu.cn/modules/system/system.base.css?rh7uvg");
+		</style>
+		<style>
+			@import url("https://cgyy.xmu.edu.cn/sites/all/modules/date/date_api/date.css?rh7uvg");
+			@import url("https://cgyy.xmu.edu.cn/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?rh7uvg");
+			@import url("https://cgyy.xmu.edu.cn/sites/all/modules/date/date_repeat_field/date_repeat_field.css?rh7uvg");
+			@import url("https://cgyy.xmu.edu.cn/modules/field/theme/field.css?rh7uvg");
+			@import url("https://cgyy.xmu.edu.cn/modules/node/node.css?rh7uvg");
+			@import url("https://cgyy.xmu.edu.cn/sites/all/modules/views/css/views.css?rh7uvg");
+		</style>
+		<style>
+			@import url("https://cgyy.xmu.edu.cn/sites/all/modules/ctools/css/ctools.css?rh7uvg");
+			@import url("https://cgyy.xmu.edu.cn/sites/all/modules/room_reservations/room_reservations.css?rh7uvg");
+		</style>
+		<link type="text/css" rel="stylesheet" href="https://cgyy.xmu.edu.cn/sites/all/themes/bootstrap/css/bootstrap.css"
+		 media="all" />
+		<style>
+			@import url("https://cgyy.xmu.edu.cn/sites/all/themes/bootstrap/css/custom.css?rh7uvg");
+</style>
+		<!-- HTML5 element support for IE6-8 -->
+		<!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<script src="https://cgyy.xmu.edu.cn/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.js?v=1.10.2"></script>
+		<script src="https://cgyy.xmu.edu.cn/misc/jquery-extend-3.4.0.js?v=1.10.2"></script>
+		<script src="https://cgyy.xmu.edu.cn/misc/jquery-html-prefilter-3.5.0-backport.js?v=1.10.2"></script>
+		<script src="https://cgyy.xmu.edu.cn/misc/jquery.once.js?v=1.2"></script>
+		<script src="https://cgyy.xmu.edu.cn/misc/drupal.js?rh7uvg"></script>
+		<script src="https://cgyy.xmu.edu.cn/sites/all/themes/bootstrap/js/bootstrap.js"></script>
+		<script src="https://cgyy.xmu.edu.cn/sites/default/files/languages/zh-hans_C-Rb5wiQX-U3S-pj9DWrH-BbuR_27URKEBzSVIJEgqk.js?rh7uvg"></script>
+		<script src="https://cgyy.xmu.edu.cn/sites/all/modules/room_reservations/room_reservations.js?rh7uvg"></script>
+		<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"bootstrap","theme_token":"FQOn86xJ6w8sN0bH9c0U8wLpFzgAXzKz5xY6gwaqvLA","js":{"sites\/all\/themes\/bootstrap\/js\/bootstrap.js":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"https:\/\/cgyy.xmu.edu.cn\/sites\/all\/themes\/bootstrap\/js\/bootstrap.js":1,"public:\/\/languages\/zh-hans_C-Rb5wiQX-U3S-pj9DWrH-BbuR_27URKEBzSVIJEgqk.js":1,"sites\/all\/modules\/room_reservations\/room_reservations.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/room_reservations\/room_reservations.css":1,"https:\/\/cgyy.xmu.edu.cn\/sites\/all\/themes\/bootstrap\/css\/bootstrap.css":1,"sites\/all\/themes\/bootstrap\/css\/custom.css":1}},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"formHasError":1,"popoverEnabled":1,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+	</head>
+	<body class="html not-front logged-in no-sidebars page-my-reservations page-my-reservations-slot">
+		<div id="skip-link">
+			<a href="#main-content" class="element-invisible element-focusable">跳转到主要内容</a>
+		</div>
+		<div class="website-content">
+			<div class="website-head">
+				<header id="navbar" role="banner" class="navbar container navbar-default">
+					<div class="container">
+						<div class="navbar-header">
+							<a class="logo navbar-btn pull-left" href="/" title="首页">
+								<img src="https://cgyy.xmu.edu.cn/sites/default/files/logo.png" alt="首页" />
+							</a>
+
+							<a class="name navbar-brand" href="/" title="首页">翔安校区体育馆预约系统</a>
+
+							<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+
+						<div class="navbar-collapse collapse">
+							<nav role="navigation">
+								<!--          <div class="language-switcher">-->
+								<!--            <a href="?q=en">English</a> | <a href="?q=zh-hans">中文</a>-->
+								<!--          </div>-->
+								<div class="blank_zone hidden-xs visible-sm-block visible-md-block visible-lg-block">
+									你好，23020221154099 </div>
+								<div class="menu-zone">
+									<ul class="menu nav navbar-nav">
+										<li class="first leaf menu-222"><a href="/" title="">首页</a></li>
+										<li class="leaf menu-697"><a href="/my_reservations" title="" class="active">我的预约</a></li>
+										<li class="leaf menu-640"><a href="/room_reservations" title="">场地预约</a></li>
+										<li class="leaf menu-854"><a href="/room/1" title="">健身房预约</a></li>
+										<li class="leaf menu-1255"><a href="/room/2" title="">游泳馆预约</a></li>
+										<li class="last leaf menu-1598"><a href="/misd_query">违规查询</a></li>
+									</ul>
+									<ul class="menu nav navbar-nav secondary">
+										<li class="first last leaf menu-15"><a href="/user/logout">退出</a></li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+					</div>
+				</header>
+			</div>
+			<div class="header_line"></div>
+			<div class="main-container container">
+
+				<header role="banner" id="page-header">
+
+				</header> <!-- /#page-header -->
+
+				<div class="row">
+
+
+					<section class="col-sm-12">
+						<ol class="breadcrumb">
+							<li><a href="/my_reservations">我的预约</a></li>
+							<li class="active">健身房预约</li>
+						</ol> <a id="main-content"></a>
+						<h1 class="title" id="page-title">
+							健身房预约 </h1>
+						<h2 class="element-invisible">主标签</h2>
+						<ul class="tabs--primary nav nav-tabs">
+							<li><a href="/my_reservations">场地预约</a></li>
+							<li class="active"><a href="/my_reservations/slot" class="active">健身房预约<span class="element-invisible">（活动标签）</span></a></li>
+							<li><a href="/my_reservations/slot2">游泳馆预约</a></li>
+						</ul>
+						<div class="region region-content">
+							<section id="block-system-main" class="block block-system clearfix">
+
+
+								<div class="view view-slot-appl-list view-id-slot_appl_list view-display-id-page_2 view-dom-id-a03868b683e9d6facfbe6a6f792a0860">
+
+
+
+									<div class="view-content">
+										<div class="table-responsive">
+											<table class="views-table cols-5 table table-hover table-striped">
+												<thead>
+													<tr>
+														<th class="views-field views-field-name">
+															学工号 </th>
+														<th class="views-field views-field-field-real-name">
+															姓名 </th>
+														<th class="views-field views-field-field-date views-align-center">
+															日期 </th>
+														<th class="views-field views-field-nothing views-align-center">
+															时段 </th>
+														<th class="views-field views-field-delete-node">
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="odd views-row-first">
+														<td class="views-field views-field-name" contenteditable="true">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name" contenteditable="true">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center" contenteditable="true">
+															<span class="date-display-single">2022-11-05,星期六</span> </td>
+														<td class="views-field views-field-nothing views-align-center" contenteditable="true">
+															19:30-21:00 </td>
+														<td class="views-field views-field-delete-node" contenteditable="true">
+															<a href="/node/577789/delete?destination=my_reservations/slot">取消预约</a> </td>
+													</tr>
+													<tr class="even">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-11-04,星期五</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															19:30-21:00 </td>
+														<td class="views-field views-field-delete-node">
+															<a href="/node/576454/delete?destination=my_reservations/slot">取消预约</a> </td>
+													</tr>
+													<tr class="odd">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-11-03,星期四</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															19:30-21:00 </td>
+														<td class="views-field views-field-delete-node">
+															<a href="/node/575008/delete?destination=my_reservations/slot">取消预约</a> </td>
+													</tr>
+													<tr class="even">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-11-02,星期三</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															15:00-16:30 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="odd">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-11-01,星期二</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															18:00-19:30 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="even">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-31,星期一</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															16:30-18:00 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="odd">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-29,星期六</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															18:00-19:30 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="even">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-27,星期四</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															19:30-21:00 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="odd">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-25,星期二</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															19:30-21:00 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="even">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-24,星期一</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															16:30-18:00 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="odd">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-23,星期日</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															19:30-21:00 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="even">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-22,星期六</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															19:30-21:00 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="odd">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-20,星期四</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															19:30-21:00 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="even">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-18,星期二</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															19:30-21:00 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="odd">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-17,星期一</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															18:00-19:30 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="even">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-16,星期日</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															18:00-19:30 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="odd">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-13,星期四</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															18:00-19:30 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="even">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-11,星期二</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															19:30-21:00 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="odd">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-08,星期六</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															18:00-19:30 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+													<tr class="even views-row-last">
+														<td class="views-field views-field-name">
+															23020221154099 </td>
+														<td class="views-field views-field-field-real-name">
+															林立 </td>
+														<td class="views-field views-field-field-date views-align-center">
+															<span class="date-display-single">2022-10-06,星期四</span> </td>
+														<td class="views-field views-field-nothing views-align-center">
+															18:00-19:30 </td>
+														<td class="views-field views-field-delete-node">
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+									<div class="text-center">
+										<ul class="pagination">
+											<li class="active"><span>1</span></li>
+											<li><a title="到第 2 页" href="/my_reservations/slot?page=1">2</a></li>
+											<li class="next"><a title="转到下一页" href="/my_reservations/slot?page=1">下一页 ›</a></li>
+											<li class="pager-last"><a title="转到最后一页" href="/my_reservations/slot?page=1">末页 »</a></li>
+										</ul>
+									</div>
+
+
+
+
+								</div>
+							</section> <!-- /.block -->
+						</div>
+					</section>
+
+
+				</div>
+			</div>
+			<div class="main-footer-blank"></div>\
+		</div>
+		<footer class="footer container">
+			<div class="region region-footer">
+				<section id="block-block-2" class="block block-block clearfix">
+
+
+					<p><a href="http://library.xmu.edu.cn/"> 厦门大学图书馆</a> 版权所有 ©2018 <br />维护制作 厦门大学图书馆 信息技术部</p>
+
+				</section> <!-- /.block -->
+			</div>
+		</footer>
+		<script src="https://cgyy.xmu.edu.cn/sites/all/themes/bootstrap/js/bootstrap.js?rh7uvg"></script>
+	</body>
+</html>
